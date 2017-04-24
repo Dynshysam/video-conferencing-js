@@ -1,4 +1,6 @@
 
+var SERVER = "http://webrtc750.azurewebsites.net/server"
+
 //checks if the browser supports WebRTC 
 function hasUserMedia() { 
    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
@@ -18,7 +20,7 @@ if (hasUserMedia()) {
       video.src = window.URL.createObjectURL(stream); 
    }, function (err) {}); 
 	
-    Console.log("WebRTC is supported");
+    console.log("WebRTC is supported");
     
 } else {
    alert("Error. WebRTC is not supported!"); 
